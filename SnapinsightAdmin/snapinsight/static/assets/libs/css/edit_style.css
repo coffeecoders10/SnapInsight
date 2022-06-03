@@ -1,0 +1,28 @@
+
+
+.input_blank{
+  border: none;
+  background: none;
+  width:100%;
+}
+.input_border{
+  border: none;
+  background: none;
+  width:100%;
+  border-bottom: 1px solid #3C3C3C;
+}
+.input_border:focus{
+  outline: none;
+}
+.login_input{
+  background: none;
+  border:none;
+  border-bottom: 4px #1B4485 solid;
+  width:100%;
+  transition: all 1s;
+  color:#1B4485;
+}
+.login_input:focus{
+  outline: none;
+  border-bottom: 4px #4684E6 solid;
+}

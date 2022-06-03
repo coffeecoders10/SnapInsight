@@ -1,0 +1,67 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <link href="{% static 'assets/vendor/fonts/circular-std/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'assets/libs/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/libs/css/edit_style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/fonts/fontawesome/css/fontawesome-all.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/charts/chartist-bundle/chartist.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/charts/morris-bundle/morris.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/charts/c3charts/c3.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/fonts/flag-icon-css/flag-icon.min.css' %}">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Snapinsight</title>
+  {% block script %}
+  {% endblock script %}
+</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center align-items-center" style="min-height:100vh">
+        <div class="col-lg-6 col-10 d-flex justify-content-center align-items-center py-5">
+          <div class="container-fluid mb-2">
+            <form action="/" method="POST">
+              {% csrf_token %}
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center mb-5">
+                <p class="navbar-brand">
+                  SNAPINSIGHT
+                </p>
+              </div>
+
+              <div class="col-12 d-flex justify-content-center mb-5">
+                <input class="login_input" type="text" name="uname" value="" placeholder="User Name">
+              </div>
+              <div class="col-12 d-flex justify-content-center mb-5">
+                <input class="login_input" type="password" name="password" value="" placeholder="Password">
+              </div>
+              <div class="col-12 d-flex justify-content-center mb-5">
+                <!-- <button type="submit" class="btn btn-primary" name="button" style="width:50%"> LOG IN </button> -->
+                <button type="submit" class="btn btn-primary" name="button" style="width:50%"> LOG IN </button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="{% static 'assets/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <!-- bootstap bundle js -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.js' %}"></script>
+    <!-- main js -->
+    <script src="{% static 'assets/libs/js/main-js.js' %}"></script>
+  </body>
+</html>
